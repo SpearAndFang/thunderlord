@@ -1,0 +1,147 @@
+{
+  "code": "thunderlord",
+  "class": "EntityAgent",
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [
+        "normal"
+      ]
+    }
+  ],
+  "canClimb": true,
+  "collisionBoxSize": {
+    "x": 1,
+    "y": 1.3
+  },
+  "deadCollisionboxSize": {
+    "x": 1.2,
+    "y": 0.75
+  },
+  "selectionBoxSize": {
+    "x": 1.2,
+    "y": 4
+  },
+  "deadSelectionboxSize": {
+    "x": 1.2,
+    "y": 1
+  },
+  "falldamage": false,
+  "eyeHeight": 4,
+  "hitboxSize": {
+    "x": 0,
+    "y": 0
+  },
+  "knockbackResistance": 1,
+  "drops": [],
+  "client": {
+    "renderer": "Shape",
+    "pitchStep": false,
+    "size": 3,
+    "shape": {
+      "base": "game:entity/supermech/thunderlord"
+    },
+    "texture": {
+      "base": "game:block/metal/tarnished/rust"
+    },
+    "behaviors": [
+      {
+        "code": "repulseagents"
+      },
+      {
+        "code": "controlledphysics",
+        "stepHeight": 1.1251
+      },
+      {
+        "code": "floatupwhenstuck",
+        "onlyWhenDead": false
+      },
+      {
+        "code": "interpolateposition"
+      }
+    ],
+    "animations": [
+      {
+        "code": "walk",
+        "animation": "walk",
+        "blendMode": "Average",
+        "triggeredBy": {
+          "defaultAnim": true
+        }
+      }
+    ]
+  },
+  "server": {
+    "behaviors": [
+      {
+        "code": "controlledphysics",
+        "stepHeight": 1.1251
+      },
+      {
+        "code": "despawn",
+        "minPlayerDistance": 128,
+        "minSeconds": 1
+      },
+      {
+        "code": "taskai",
+        "aitasks": [
+          {
+            "code": "wander",
+            "priority": 0.99,
+            "priorityForCancel": 1.1,
+            "movespeed": 0.008,
+            "animationSpeed": 1.1,
+            "animation": "walk",
+            "preferredLightLevel": 15,
+            "sound": "entity/livingdead/rattle",
+            "soundStartMs": 400
+          },
+          {
+            "code": "getoutofwater",
+            "priority": 1.4,
+            "movespeed": 0.015,
+            "animation": "walk",
+            "animationSpeed": 1.55
+          },
+          {
+            "code": "lookaround",
+            "priority": 0.5
+          }
+        ]
+      }
+    ],
+    "spawnconditions": {
+      "worldgen": {
+        "TriesPerChunk": {
+          "avg": 0.00015,
+          "var": 0
+        },
+        "tryOnlySurface": true,
+        "groupSize": {
+          "dist": "verynarrowgaussian",
+          "avg": 1,
+          "var": 0
+        },
+        "insideBlockCodes": [ "game:air", "game:tallgrass-*" ],
+        "minRain": 0.25
+      },
+      "runtime": {
+        "group": "neutral",
+        "tryOnlySurface": true,
+        "mindistancetoplayer": 96,
+        "maxQuantity": 1,
+        "__comment": "Make them spawn away from artifical light so they don't spawn inside farmland",
+        "maxLightLevel": 7,
+        "lightLevelType": "onlyBlockLight",
+        "groupSize": {
+          "dist": "verynarrowgaussian",
+          "avg": 1,
+          "var": 0
+        },
+        "insideBlockCodes": [ "game:air", "game:tallgrass-*" ],
+        "minRain": 0.25,
+        "chance": 0.00015
+      }
+    }
+  }
+}

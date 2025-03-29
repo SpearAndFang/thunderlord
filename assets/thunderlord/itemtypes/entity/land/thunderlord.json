@@ -1,0 +1,97 @@
+{
+  "code": "thunderlord",
+  "class": "itemthunderlord",
+  "maxstacksize": 64,
+  "variantgroups": [
+    {
+      "code": "type",
+      "states": [ "normal" ]
+    }
+  ],
+  "shapeByType": {
+    "*": { "base": "game:entity/supermech/thunderlord" }
+  },
+  "texturesByType": {
+    "rust": "game:block/metal/tarnished/rust"
+  },
+  "creativeinventory": {
+    "general": [ "*" ],
+    "creatures": [ "*" ],
+    "thunderlord": [ "*" ]
+  },
+  "heldRightTpIdleAnimation": "holdinglanternrighthand",
+  "materialDensity": 600,
+  "fpHandTransform": {
+    "translation": {
+      "x": 0.42,
+      "y": -0.45,
+      "z": 0
+    },
+    "rotation": {
+      "x": 17,
+      "y": 86,
+      "z": -20
+    },
+    "origin": {
+      "x": -0.1,
+      "y": 0.7,
+      "z": 1.3
+    },
+    "scale": 0.88
+  },
+  "guiTransform": {
+    "translation": {
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "rotation": {
+      "x": -17,
+      "y": -140,
+      "z": 180
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 11.9,
+      "z": 0.5
+    },
+    "scale": 0.95,
+    "rotate": false
+  },
+  "tpHandTransform": {
+    "translation": {
+      "x": -0.3,
+      "y": 0.1,
+      "z": -1.4
+    },
+    "rotation": {
+      "x": -153,
+      "y": 172,
+      "z": 93
+    },
+    "origin": {
+      "x": 2.25,
+      "y": -0.9,
+      "z": 0.12
+    },
+    "scale": 0.36
+  },
+  "groundTransform": {
+    "translation": {
+      "x": 0,
+      "y": -0.1,
+      "z": 0
+    },
+    "rotation": {
+      "x": 88,
+      "y": 3,
+      "z": 8
+    },
+    "origin": {
+      "x": 0.5,
+      "y": 1.1,
+      "z": 0.5299
+    },
+    "scale": 3.21
+  }
+}

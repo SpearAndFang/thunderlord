@@ -1,0 +1,12 @@
+{
+  "game:tabname-thunderlord": "Thunderlord",
+  "thunderlord-normal": "Thunderlord",
+  "item-creature-thunderlord-normal": "Thunderlord",
+
+  "item-thunderlord*": "Thunderlord",
+  "item-creature-thunderlord*": "Thunderlord",
+  "itemdesc-thunderlord*": "Solstin left the gate open, and this happened.",
+
+  "item-dead-creature-thunderlord*": "Thunderlord (dead)",
+  "game:prefixandcreature-thunderlordnormal": "Thunderlord"
+}
